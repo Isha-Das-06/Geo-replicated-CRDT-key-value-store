@@ -1,0 +1,1282 @@
+[
+  {
+    "scenario": "single_region_isolated",
+    "crdt_type": "gcounter",
+    "partition_duration_s": 5.0,
+    "write_availability": 1.0,
+    "convergence_time_s": 0.20334959030151367,
+    "peak_divergence": 99,
+    "writes_during_partition": 297,
+    "writes_after_heal": 15,
+    "network_stats": {
+      "sent": 170,
+      "dropped": 0,
+      "partitioned": 100,
+      "delivered": 68
+    },
+    "node_metrics": {
+      "us-east": {
+        "node_id": "us-east",
+        "region": "US East (N. Virginia)",
+        "write_attempts": 105,
+        "write_successes": 105,
+        "write_availability": 1.0,
+        "gossip_sent": 56,
+        "gossip_received": 6,
+        "store_stats": {
+          "node_id": "us-east",
+          "keys": 1,
+          "writes": 104,
+          "merges": 6
+        }
+      },
+      "eu-west": {
+        "node_id": "eu-west",
+        "region": "EU West (Ireland)",
+        "write_attempts": 105,
+        "write_successes": 105,
+        "write_availability": 1.0,
+        "gossip_sent": 56,
+        "gossip_received": 31,
+        "store_stats": {
+          "node_id": "eu-west",
+          "keys": 1,
+          "writes": 104,
+          "merges": 31
+        }
+      },
+      "ap-south": {
+        "node_id": "ap-south",
+        "region": "AP South (Mumbai)",
+        "write_attempts": 105,
+        "write_successes": 105,
+        "write_availability": 1.0,
+        "gossip_sent": 58,
+        "gossip_received": 31,
+        "store_stats": {
+          "node_id": "ap-south",
+          "keys": 1,
+          "writes": 104,
+          "merges": 31
+        }
+      }
+    },
+    "description": "One region loses connectivity. The majority partition continues serving reads and writes. CAP: we choose A over C."
+  },
+  {
+    "scenario": "single_region_isolated",
+    "crdt_type": "pncounter",
+    "partition_duration_s": 5.0,
+    "write_availability": 1.0,
+    "convergence_time_s": 0.6584639549255371,
+    "peak_divergence": 33,
+    "writes_during_partition": 297,
+    "writes_after_heal": 42,
+    "network_stats": {
+      "sent": 188,
+      "dropped": 0,
+      "partitioned": 100,
+      "delivered": 86
+    },
+    "node_metrics": {
+      "us-east": {
+        "node_id": "us-east",
+        "region": "US East (N. Virginia)",
+        "write_attempts": 114,
+        "write_successes": 114,
+        "write_availability": 1.0,
+        "gossip_sent": 62,
+        "gossip_received": 12,
+        "store_stats": {
+          "node_id": "us-east",
+          "keys": 1,
+          "writes": 113,
+          "merges": 12
+        }
+      },
+      "eu-west": {
+        "node_id": "eu-west",
+        "region": "EU West (Ireland)",
+        "write_attempts": 114,
+        "write_successes": 114,
+        "write_availability": 1.0,
+        "gossip_sent": 62,
+        "gossip_received": 37,
+        "store_stats": {
+          "node_id": "eu-west",
+          "keys": 1,
+          "writes": 113,
+          "merges": 37
+        }
+      },
+      "ap-south": {
+        "node_id": "ap-south",
+        "region": "AP South (Mumbai)",
+        "write_attempts": 114,
+        "write_successes": 114,
+        "write_availability": 1.0,
+        "gossip_sent": 64,
+        "gossip_received": 37,
+        "store_stats": {
+          "node_id": "ap-south",
+          "keys": 1,
+          "writes": 113,
+          "merges": 37
+        }
+      }
+    },
+    "description": "One region loses connectivity. The majority partition continues serving reads and writes. CAP: we choose A over C."
+  },
+  {
+    "scenario": "single_region_isolated",
+    "crdt_type": "lwwregister",
+    "partition_duration_s": 5.0,
+    "write_availability": 1.0,
+    "convergence_time_s": null,
+    "peak_divergence": 0,
+    "writes_during_partition": 297,
+    "writes_after_heal": 890,
+    "network_stats": {
+      "sent": 614,
+      "dropped": 0,
+      "partitioned": 100,
+      "delivered": 512
+    },
+    "node_metrics": {
+      "us-east": {
+        "node_id": "us-east",
+        "region": "US East (N. Virginia)",
+        "write_attempts": 397,
+        "write_successes": 397,
+        "write_availability": 1.0,
+        "gossip_sent": 204,
+        "gossip_received": 154,
+        "store_stats": {
+          "node_id": "us-east",
+          "keys": 1,
+          "writes": 396,
+          "merges": 154
+        }
+      },
+      "eu-west": {
+        "node_id": "eu-west",
+        "region": "EU West (Ireland)",
+        "write_attempts": 397,
+        "write_successes": 397,
+        "write_availability": 1.0,
+        "gossip_sent": 204,
+        "gossip_received": 179,
+        "store_stats": {
+          "node_id": "eu-west",
+          "keys": 1,
+          "writes": 396,
+          "merges": 179
+        }
+      },
+      "ap-south": {
+        "node_id": "ap-south",
+        "region": "AP South (Mumbai)",
+        "write_attempts": 396,
+        "write_successes": 396,
+        "write_availability": 1.0,
+        "gossip_sent": 206,
+        "gossip_received": 179,
+        "store_stats": {
+          "node_id": "ap-south",
+          "keys": 1,
+          "writes": 395,
+          "merges": 179
+        }
+      }
+    },
+    "description": "One region loses connectivity. The majority partition continues serving reads and writes. CAP: we choose A over C."
+  },
+  {
+    "scenario": "single_region_isolated",
+    "crdt_type": "orset",
+    "partition_duration_s": 5.0,
+    "write_availability": 1.0,
+    "convergence_time_s": 0.20336580276489258,
+    "peak_divergence": 0,
+    "writes_during_partition": 294,
+    "writes_after_heal": 14,
+    "network_stats": {
+      "sent": 170,
+      "dropped": 0,
+      "partitioned": 100,
+      "delivered": 68
+    },
+    "node_metrics": {
+      "us-east": {
+        "node_id": "us-east",
+        "region": "US East (N. Virginia)",
+        "write_attempts": 104,
+        "write_successes": 104,
+        "write_availability": 1.0,
+        "gossip_sent": 56,
+        "gossip_received": 6,
+        "store_stats": {
+          "node_id": "us-east",
+          "keys": 1,
+          "writes": 103,
+          "merges": 6
+        }
+      },
+      "eu-west": {
+        "node_id": "eu-west",
+        "region": "EU West (Ireland)",
+        "write_attempts": 104,
+        "write_successes": 104,
+        "write_availability": 1.0,
+        "gossip_sent": 56,
+        "gossip_received": 31,
+        "store_stats": {
+          "node_id": "eu-west",
+          "keys": 1,
+          "writes": 103,
+          "merges": 31
+        }
+      },
+      "ap-south": {
+        "node_id": "ap-south",
+        "region": "AP South (Mumbai)",
+        "write_attempts": 103,
+        "write_successes": 103,
+        "write_availability": 1.0,
+        "gossip_sent": 58,
+        "gossip_received": 31,
+        "store_stats": {
+          "node_id": "ap-south",
+          "keys": 1,
+          "writes": 102,
+          "merges": 31
+        }
+      }
+    },
+    "description": "One region loses connectivity. The majority partition continues serving reads and writes. CAP: we choose A over C."
+  },
+  {
+    "scenario": "transatlantic_cut",
+    "crdt_type": "gcounter",
+    "partition_duration_s": 5.0,
+    "write_availability": 1.0,
+    "convergence_time_s": 0.709434986114502,
+    "peak_divergence": 99,
+    "writes_during_partition": 297,
+    "writes_after_heal": 42,
+    "network_stats": {
+      "sent": 188,
+      "dropped": 0,
+      "partitioned": 100,
+      "delivered": 86
+    },
+    "node_metrics": {
+      "us-east": {
+        "node_id": "us-east",
+        "region": "US East (N. Virginia)",
+        "write_attempts": 114,
+        "write_successes": 114,
+        "write_availability": 1.0,
+        "gossip_sent": 62,
+        "gossip_received": 12,
+        "store_stats": {
+          "node_id": "us-east",
+          "keys": 1,
+          "writes": 113,
+          "merges": 12
+        }
+      },
+      "eu-west": {
+        "node_id": "eu-west",
+        "region": "EU West (Ireland)",
+        "write_attempts": 114,
+        "write_successes": 114,
+        "write_availability": 1.0,
+        "gossip_sent": 62,
+        "gossip_received": 37,
+        "store_stats": {
+          "node_id": "eu-west",
+          "keys": 1,
+          "writes": 113,
+          "merges": 37
+        }
+      },
+      "ap-south": {
+        "node_id": "ap-south",
+        "region": "AP South (Mumbai)",
+        "write_attempts": 114,
+        "write_successes": 114,
+        "write_availability": 1.0,
+        "gossip_sent": 64,
+        "gossip_received": 37,
+        "store_stats": {
+          "node_id": "ap-south",
+          "keys": 1,
+          "writes": 113,
+          "merges": 37
+        }
+      }
+    },
+    "description": "Simulates a transatlantic cable cut. Both partitions continue accepting writes independently and diverge temporarily."
+  },
+  {
+    "scenario": "transatlantic_cut",
+    "crdt_type": "pncounter",
+    "partition_duration_s": 5.0,
+    "write_availability": 1.0,
+    "convergence_time_s": 0.3153200149536133,
+    "peak_divergence": 33,
+    "writes_during_partition": 297,
+    "writes_after_heal": 21,
+    "network_stats": {
+      "sent": 174,
+      "dropped": 0,
+      "partitioned": 100,
+      "delivered": 68
+    },
+    "node_metrics": {
+      "us-east": {
+        "node_id": "us-east",
+        "region": "US East (N. Virginia)",
+        "write_attempts": 107,
+        "write_successes": 107,
+        "write_availability": 1.0,
+        "gossip_sent": 58,
+        "gossip_received": 6,
+        "store_stats": {
+          "node_id": "us-east",
+          "keys": 1,
+          "writes": 106,
+          "merges": 6
+        }
+      },
+      "eu-west": {
+        "node_id": "eu-west",
+        "region": "EU West (Ireland)",
+        "write_attempts": 107,
+        "write_successes": 107,
+        "write_availability": 1.0,
+        "gossip_sent": 58,
+        "gossip_received": 31,
+        "store_stats": {
+          "node_id": "eu-west",
+          "keys": 1,
+          "writes": 106,
+          "merges": 31
+        }
+      },
+      "ap-south": {
+        "node_id": "ap-south",
+        "region": "AP South (Mumbai)",
+        "write_attempts": 107,
+        "write_successes": 107,
+        "write_availability": 1.0,
+        "gossip_sent": 58,
+        "gossip_received": 31,
+        "store_stats": {
+          "node_id": "ap-south",
+          "keys": 1,
+          "writes": 106,
+          "merges": 31
+        }
+      }
+    },
+    "description": "Simulates a transatlantic cable cut. Both partitions continue accepting writes independently and diverge temporarily."
+  },
+  {
+    "scenario": "transatlantic_cut",
+    "crdt_type": "lwwregister",
+    "partition_duration_s": 5.0,
+    "write_availability": 1.0,
+    "convergence_time_s": null,
+    "peak_divergence": 0,
+    "writes_during_partition": 297,
+    "writes_after_heal": 888,
+    "network_stats": {
+      "sent": 608,
+      "dropped": 0,
+      "partitioned": 100,
+      "delivered": 506
+    },
+    "node_metrics": {
+      "us-east": {
+        "node_id": "us-east",
+        "region": "US East (N. Virginia)",
+        "write_attempts": 396,
+        "write_successes": 396,
+        "write_availability": 1.0,
+        "gossip_sent": 202,
+        "gossip_received": 152,
+        "store_stats": {
+          "node_id": "us-east",
+          "keys": 1,
+          "writes": 395,
+          "merges": 152
+        }
+      },
+      "eu-west": {
+        "node_id": "eu-west",
+        "region": "EU West (Ireland)",
+        "write_attempts": 396,
+        "write_successes": 396,
+        "write_availability": 1.0,
+        "gossip_sent": 202,
+        "gossip_received": 177,
+        "store_stats": {
+          "node_id": "eu-west",
+          "keys": 1,
+          "writes": 395,
+          "merges": 177
+        }
+      },
+      "ap-south": {
+        "node_id": "ap-south",
+        "region": "AP South (Mumbai)",
+        "write_attempts": 396,
+        "write_successes": 396,
+        "write_availability": 1.0,
+        "gossip_sent": 204,
+        "gossip_received": 177,
+        "store_stats": {
+          "node_id": "ap-south",
+          "keys": 1,
+          "writes": 395,
+          "merges": 177
+        }
+      }
+    },
+    "description": "Simulates a transatlantic cable cut. Both partitions continue accepting writes independently and diverge temporarily."
+  },
+  {
+    "scenario": "transatlantic_cut",
+    "crdt_type": "orset",
+    "partition_duration_s": 5.0,
+    "write_availability": 1.0,
+    "convergence_time_s": 0.1248466968536377,
+    "peak_divergence": 0,
+    "writes_during_partition": 285,
+    "writes_after_heal": 9,
+    "network_stats": {
+      "sent": 170,
+      "dropped": 0,
+      "partitioned": 98,
+      "delivered": 70
+    },
+    "node_metrics": {
+      "us-east": {
+        "node_id": "us-east",
+        "region": "US East (N. Virginia)",
+        "write_attempts": 99,
+        "write_successes": 99,
+        "write_availability": 1.0,
+        "gossip_sent": 56,
+        "gossip_received": 8,
+        "store_stats": {
+          "node_id": "us-east",
+          "keys": 1,
+          "writes": 98,
+          "merges": 8
+        }
+      },
+      "eu-west": {
+        "node_id": "eu-west",
+        "region": "EU West (Ireland)",
+        "write_attempts": 99,
+        "write_successes": 99,
+        "write_availability": 1.0,
+        "gossip_sent": 56,
+        "gossip_received": 31,
+        "store_stats": {
+          "node_id": "eu-west",
+          "keys": 1,
+          "writes": 98,
+          "merges": 31
+        }
+      },
+      "ap-south": {
+        "node_id": "ap-south",
+        "region": "AP South (Mumbai)",
+        "write_attempts": 99,
+        "write_successes": 99,
+        "write_availability": 1.0,
+        "gossip_sent": 58,
+        "gossip_received": 31,
+        "store_stats": {
+          "node_id": "ap-south",
+          "keys": 1,
+          "writes": 98,
+          "merges": 31
+        }
+      }
+    },
+    "description": "Simulates a transatlantic cable cut. Both partitions continue accepting writes independently and diverge temporarily."
+  },
+  {
+    "scenario": "majority_minority_split",
+    "crdt_type": "gcounter",
+    "partition_duration_s": 5.0,
+    "write_availability": 1.0,
+    "convergence_time_s": 0.15266752243041992,
+    "peak_divergence": 98,
+    "writes_during_partition": 298,
+    "writes_after_heal": 12,
+    "network_stats": {
+      "sent": 174,
+      "dropped": 0,
+      "partitioned": 100,
+      "delivered": 72
+    },
+    "node_metrics": {
+      "us-east": {
+        "node_id": "us-east",
+        "region": "US East (N. Virginia)",
+        "write_attempts": 104,
+        "write_successes": 104,
+        "write_availability": 1.0,
+        "gossip_sent": 56,
+        "gossip_received": 33,
+        "store_stats": {
+          "node_id": "us-east",
+          "keys": 1,
+          "writes": 103,
+          "merges": 33
+        }
+      },
+      "eu-west": {
+        "node_id": "eu-west",
+        "region": "EU West (Ireland)",
+        "write_attempts": 104,
+        "write_successes": 104,
+        "write_availability": 1.0,
+        "gossip_sent": 58,
+        "gossip_received": 32,
+        "store_stats": {
+          "node_id": "eu-west",
+          "keys": 1,
+          "writes": 103,
+          "merges": 32
+        }
+      },
+      "ap-south": {
+        "node_id": "ap-south",
+        "region": "AP South (Mumbai)",
+        "write_attempts": 105,
+        "write_successes": 105,
+        "write_availability": 1.0,
+        "gossip_sent": 60,
+        "gossip_received": 7,
+        "store_stats": {
+          "node_id": "ap-south",
+          "keys": 1,
+          "writes": 104,
+          "merges": 7
+        }
+      }
+    },
+    "description": "Majority (2 nodes) vs minority (1 node) partition. All nodes stay available; minority diverges then converges on heal."
+  },
+  {
+    "scenario": "majority_minority_split",
+    "crdt_type": "pncounter",
+    "partition_duration_s": 5.0,
+    "write_availability": 1.0,
+    "convergence_time_s": 0.2089996337890625,
+    "peak_divergence": 33,
+    "writes_during_partition": 297,
+    "writes_after_heal": 15,
+    "network_stats": {
+      "sent": 170,
+      "dropped": 0,
+      "partitioned": 100,
+      "delivered": 68
+    },
+    "node_metrics": {
+      "us-east": {
+        "node_id": "us-east",
+        "region": "US East (N. Virginia)",
+        "write_attempts": 105,
+        "write_successes": 105,
+        "write_availability": 1.0,
+        "gossip_sent": 56,
+        "gossip_received": 31,
+        "store_stats": {
+          "node_id": "us-east",
+          "keys": 1,
+          "writes": 104,
+          "merges": 31
+        }
+      },
+      "eu-west": {
+        "node_id": "eu-west",
+        "region": "EU West (Ireland)",
+        "write_attempts": 105,
+        "write_successes": 105,
+        "write_availability": 1.0,
+        "gossip_sent": 56,
+        "gossip_received": 31,
+        "store_stats": {
+          "node_id": "eu-west",
+          "keys": 1,
+          "writes": 104,
+          "merges": 31
+        }
+      },
+      "ap-south": {
+        "node_id": "ap-south",
+        "region": "AP South (Mumbai)",
+        "write_attempts": 105,
+        "write_successes": 105,
+        "write_availability": 1.0,
+        "gossip_sent": 58,
+        "gossip_received": 6,
+        "store_stats": {
+          "node_id": "ap-south",
+          "keys": 1,
+          "writes": 104,
+          "merges": 6
+        }
+      }
+    },
+    "description": "Majority (2 nodes) vs minority (1 node) partition. All nodes stay available; minority diverges then converges on heal."
+  },
+  {
+    "scenario": "majority_minority_split",
+    "crdt_type": "lwwregister",
+    "partition_duration_s": 5.0,
+    "write_availability": 1.0,
+    "convergence_time_s": null,
+    "peak_divergence": 0,
+    "writes_during_partition": 297,
+    "writes_after_heal": 885,
+    "network_stats": {
+      "sent": 608,
+      "dropped": 0,
+      "partitioned": 100,
+      "delivered": 506
+    },
+    "node_metrics": {
+      "us-east": {
+        "node_id": "us-east",
+        "region": "US East (N. Virginia)",
+        "write_attempts": 395,
+        "write_successes": 395,
+        "write_availability": 1.0,
+        "gossip_sent": 202,
+        "gossip_received": 177,
+        "store_stats": {
+          "node_id": "us-east",
+          "keys": 1,
+          "writes": 394,
+          "merges": 177
+        }
+      },
+      "eu-west": {
+        "node_id": "eu-west",
+        "region": "EU West (Ireland)",
+        "write_attempts": 394,
+        "write_successes": 394,
+        "write_availability": 1.0,
+        "gossip_sent": 202,
+        "gossip_received": 177,
+        "store_stats": {
+          "node_id": "eu-west",
+          "keys": 1,
+          "writes": 393,
+          "merges": 177
+        }
+      },
+      "ap-south": {
+        "node_id": "ap-south",
+        "region": "AP South (Mumbai)",
+        "write_attempts": 396,
+        "write_successes": 396,
+        "write_availability": 1.0,
+        "gossip_sent": 204,
+        "gossip_received": 152,
+        "store_stats": {
+          "node_id": "ap-south",
+          "keys": 1,
+          "writes": 395,
+          "merges": 152
+        }
+      }
+    },
+    "description": "Majority (2 nodes) vs minority (1 node) partition. All nodes stay available; minority diverges then converges on heal."
+  },
+  {
+    "scenario": "majority_minority_split",
+    "crdt_type": "orset",
+    "partition_duration_s": 5.0,
+    "write_availability": 1.0,
+    "convergence_time_s": 0.20538854598999023,
+    "peak_divergence": 0,
+    "writes_during_partition": 297,
+    "writes_after_heal": 15,
+    "network_stats": {
+      "sent": 174,
+      "dropped": 0,
+      "partitioned": 100,
+      "delivered": 72
+    },
+    "node_metrics": {
+      "us-east": {
+        "node_id": "us-east",
+        "region": "US East (N. Virginia)",
+        "write_attempts": 105,
+        "write_successes": 105,
+        "write_availability": 1.0,
+        "gossip_sent": 56,
+        "gossip_received": 33,
+        "store_stats": {
+          "node_id": "us-east",
+          "keys": 1,
+          "writes": 104,
+          "merges": 33
+        }
+      },
+      "eu-west": {
+        "node_id": "eu-west",
+        "region": "EU West (Ireland)",
+        "write_attempts": 105,
+        "write_successes": 105,
+        "write_availability": 1.0,
+        "gossip_sent": 58,
+        "gossip_received": 32,
+        "store_stats": {
+          "node_id": "eu-west",
+          "keys": 1,
+          "writes": 104,
+          "merges": 32
+        }
+      },
+      "ap-south": {
+        "node_id": "ap-south",
+        "region": "AP South (Mumbai)",
+        "write_attempts": 105,
+        "write_successes": 105,
+        "write_availability": 1.0,
+        "gossip_sent": 60,
+        "gossip_received": 7,
+        "store_stats": {
+          "node_id": "ap-south",
+          "keys": 1,
+          "writes": 104,
+          "merges": 7
+        }
+      }
+    },
+    "description": "Majority (2 nodes) vs minority (1 node) partition. All nodes stay available; minority diverges then converges on heal."
+  },
+  {
+    "scenario": "flapping_partition",
+    "crdt_type": "gcounter",
+    "partition_duration_s": 1.0,
+    "write_availability": 1.0,
+    "convergence_time_s": 0.15452933311462402,
+    "peak_divergence": 29,
+    "writes_during_partition": 90,
+    "writes_after_heal": 15,
+    "network_stats": {
+      "sent": 48,
+      "dropped": 0,
+      "partitioned": 20,
+      "delivered": 22
+    },
+    "node_metrics": {
+      "us-east": {
+        "node_id": "us-east",
+        "region": "US East (N. Virginia)",
+        "write_attempts": 36,
+        "write_successes": 36,
+        "write_availability": 1.0,
+        "gossip_sent": 16,
+        "gossip_received": 4,
+        "store_stats": {
+          "node_id": "us-east",
+          "keys": 1,
+          "writes": 35,
+          "merges": 4
+        }
+      },
+      "eu-west": {
+        "node_id": "eu-west",
+        "region": "EU West (Ireland)",
+        "write_attempts": 36,
+        "write_successes": 36,
+        "write_availability": 1.0,
+        "gossip_sent": 16,
+        "gossip_received": 9,
+        "store_stats": {
+          "node_id": "eu-west",
+          "keys": 1,
+          "writes": 35,
+          "merges": 9
+        }
+      },
+      "ap-south": {
+        "node_id": "ap-south",
+        "region": "AP South (Mumbai)",
+        "write_attempts": 36,
+        "write_successes": 36,
+        "write_availability": 1.0,
+        "gossip_sent": 16,
+        "gossip_received": 9,
+        "store_stats": {
+          "node_id": "ap-south",
+          "keys": 1,
+          "writes": 35,
+          "merges": 9
+        }
+      }
+    },
+    "description": "Rapid connect/disconnect (flapping link). Tests robustness of gossip convergence under repeated partial failures."
+  },
+  {
+    "scenario": "flapping_partition",
+    "crdt_type": "pncounter",
+    "partition_duration_s": 1.0,
+    "write_availability": 1.0,
+    "convergence_time_s": 0.15175747871398926,
+    "peak_divergence": 9,
+    "writes_during_partition": 90,
+    "writes_after_heal": 15,
+    "network_stats": {
+      "sent": 48,
+      "dropped": 0,
+      "partitioned": 20,
+      "delivered": 22
+    },
+    "node_metrics": {
+      "us-east": {
+        "node_id": "us-east",
+        "region": "US East (N. Virginia)",
+        "write_attempts": 36,
+        "write_successes": 36,
+        "write_availability": 1.0,
+        "gossip_sent": 16,
+        "gossip_received": 4,
+        "store_stats": {
+          "node_id": "us-east",
+          "keys": 1,
+          "writes": 35,
+          "merges": 4
+        }
+      },
+      "eu-west": {
+        "node_id": "eu-west",
+        "region": "EU West (Ireland)",
+        "write_attempts": 36,
+        "write_successes": 36,
+        "write_availability": 1.0,
+        "gossip_sent": 16,
+        "gossip_received": 9,
+        "store_stats": {
+          "node_id": "eu-west",
+          "keys": 1,
+          "writes": 35,
+          "merges": 9
+        }
+      },
+      "ap-south": {
+        "node_id": "ap-south",
+        "region": "AP South (Mumbai)",
+        "write_attempts": 36,
+        "write_successes": 36,
+        "write_availability": 1.0,
+        "gossip_sent": 16,
+        "gossip_received": 9,
+        "store_stats": {
+          "node_id": "ap-south",
+          "keys": 1,
+          "writes": 35,
+          "merges": 9
+        }
+      }
+    },
+    "description": "Rapid connect/disconnect (flapping link). Tests robustness of gossip convergence under repeated partial failures."
+  },
+  {
+    "scenario": "flapping_partition",
+    "crdt_type": "lwwregister",
+    "partition_duration_s": 1.0,
+    "write_availability": 1.0,
+    "convergence_time_s": null,
+    "peak_divergence": 0,
+    "writes_during_partition": 90,
+    "writes_after_heal": 1324,
+    "network_stats": {
+      "sent": 494,
+      "dropped": 0,
+      "partitioned": 20,
+      "delivered": 472
+    },
+    "node_metrics": {
+      "us-east": {
+        "node_id": "us-east",
+        "region": "US East (N. Virginia)",
+        "write_attempts": 472,
+        "write_successes": 472,
+        "write_availability": 1.0,
+        "gossip_sent": 164,
+        "gossip_received": 154,
+        "store_stats": {
+          "node_id": "us-east",
+          "keys": 1,
+          "writes": 471,
+          "merges": 154
+        }
+      },
+      "eu-west": {
+        "node_id": "eu-west",
+        "region": "EU West (Ireland)",
+        "write_attempts": 472,
+        "write_successes": 472,
+        "write_availability": 1.0,
+        "gossip_sent": 164,
+        "gossip_received": 159,
+        "store_stats": {
+          "node_id": "eu-west",
+          "keys": 1,
+          "writes": 471,
+          "merges": 159
+        }
+      },
+      "ap-south": {
+        "node_id": "ap-south",
+        "region": "AP South (Mumbai)",
+        "write_attempts": 473,
+        "write_successes": 473,
+        "write_availability": 1.0,
+        "gossip_sent": 166,
+        "gossip_received": 159,
+        "store_stats": {
+          "node_id": "ap-south",
+          "keys": 1,
+          "writes": 472,
+          "merges": 159
+        }
+      }
+    },
+    "description": "Rapid connect/disconnect (flapping link). Tests robustness of gossip convergence under repeated partial failures."
+  },
+  {
+    "scenario": "flapping_partition",
+    "crdt_type": "orset",
+    "partition_duration_s": 1.0,
+    "write_availability": 1.0,
+    "convergence_time_s": 0.15235185623168945,
+    "peak_divergence": 0,
+    "writes_during_partition": 87,
+    "writes_after_heal": 15,
+    "network_stats": {
+      "sent": 50,
+      "dropped": 0,
+      "partitioned": 20,
+      "delivered": 28
+    },
+    "node_metrics": {
+      "us-east": {
+        "node_id": "us-east",
+        "region": "US East (N. Virginia)",
+        "write_attempts": 35,
+        "write_successes": 35,
+        "write_availability": 1.0,
+        "gossip_sent": 16,
+        "gossip_received": 6,
+        "store_stats": {
+          "node_id": "us-east",
+          "keys": 1,
+          "writes": 34,
+          "merges": 6
+        }
+      },
+      "eu-west": {
+        "node_id": "eu-west",
+        "region": "EU West (Ireland)",
+        "write_attempts": 35,
+        "write_successes": 35,
+        "write_availability": 1.0,
+        "gossip_sent": 16,
+        "gossip_received": 11,
+        "store_stats": {
+          "node_id": "eu-west",
+          "keys": 1,
+          "writes": 34,
+          "merges": 11
+        }
+      },
+      "ap-south": {
+        "node_id": "ap-south",
+        "region": "AP South (Mumbai)",
+        "write_attempts": 35,
+        "write_successes": 35,
+        "write_availability": 1.0,
+        "gossip_sent": 18,
+        "gossip_received": 11,
+        "store_stats": {
+          "node_id": "ap-south",
+          "keys": 1,
+          "writes": 34,
+          "merges": 11
+        }
+      }
+    },
+    "description": "Rapid connect/disconnect (flapping link). Tests robustness of gossip convergence under repeated partial failures."
+  },
+  {
+    "scenario": "high_latency_no_partition",
+    "crdt_type": "gcounter",
+    "partition_duration_s": 0,
+    "write_availability": 1.0,
+    "convergence_time_s": 0.0,
+    "peak_divergence": 0,
+    "writes_during_partition": 117,
+    "writes_after_heal": 3,
+    "network_stats": {
+      "sent": 74,
+      "dropped": 0,
+      "partitioned": 0,
+      "delivered": 72
+    },
+    "node_metrics": {
+      "us-east": {
+        "node_id": "us-east",
+        "region": "US East (N. Virginia)",
+        "write_attempts": 41,
+        "write_successes": 41,
+        "write_availability": 1.0,
+        "gossip_sent": 24,
+        "gossip_received": 24,
+        "store_stats": {
+          "node_id": "us-east",
+          "keys": 1,
+          "writes": 40,
+          "merges": 24
+        }
+      },
+      "eu-west": {
+        "node_id": "eu-west",
+        "region": "EU West (Ireland)",
+        "write_attempts": 41,
+        "write_successes": 41,
+        "write_availability": 1.0,
+        "gossip_sent": 24,
+        "gossip_received": 24,
+        "store_stats": {
+          "node_id": "eu-west",
+          "keys": 1,
+          "writes": 40,
+          "merges": 24
+        }
+      },
+      "ap-south": {
+        "node_id": "ap-south",
+        "region": "AP South (Mumbai)",
+        "write_attempts": 41,
+        "write_successes": 41,
+        "write_availability": 1.0,
+        "gossip_sent": 26,
+        "gossip_received": 24,
+        "store_stats": {
+          "node_id": "ap-south",
+          "keys": 1,
+          "writes": 40,
+          "merges": 24
+        }
+      }
+    },
+    "description": "No partition \u2014 baseline measurement of convergence time under realistic cross-region latencies only."
+  },
+  {
+    "scenario": "high_latency_no_partition",
+    "crdt_type": "pncounter",
+    "partition_duration_s": 0,
+    "write_availability": 1.0,
+    "convergence_time_s": 0.2052478790283203,
+    "peak_divergence": 1,
+    "writes_during_partition": 120,
+    "writes_after_heal": 15,
+    "network_stats": {
+      "sent": 80,
+      "dropped": 0,
+      "partitioned": 0,
+      "delivered": 78
+    },
+    "node_metrics": {
+      "us-east": {
+        "node_id": "us-east",
+        "region": "US East (N. Virginia)",
+        "write_attempts": 46,
+        "write_successes": 46,
+        "write_availability": 1.0,
+        "gossip_sent": 26,
+        "gossip_received": 26,
+        "store_stats": {
+          "node_id": "us-east",
+          "keys": 1,
+          "writes": 45,
+          "merges": 26
+        }
+      },
+      "eu-west": {
+        "node_id": "eu-west",
+        "region": "EU West (Ireland)",
+        "write_attempts": 46,
+        "write_successes": 46,
+        "write_availability": 1.0,
+        "gossip_sent": 26,
+        "gossip_received": 26,
+        "store_stats": {
+          "node_id": "eu-west",
+          "keys": 1,
+          "writes": 45,
+          "merges": 26
+        }
+      },
+      "ap-south": {
+        "node_id": "ap-south",
+        "region": "AP South (Mumbai)",
+        "write_attempts": 46,
+        "write_successes": 46,
+        "write_availability": 1.0,
+        "gossip_sent": 28,
+        "gossip_received": 26,
+        "store_stats": {
+          "node_id": "ap-south",
+          "keys": 1,
+          "writes": 45,
+          "merges": 26
+        }
+      }
+    },
+    "description": "No partition \u2014 baseline measurement of convergence time under realistic cross-region latencies only."
+  },
+  {
+    "scenario": "high_latency_no_partition",
+    "crdt_type": "lwwregister",
+    "partition_duration_s": 0,
+    "write_availability": 1.0,
+    "convergence_time_s": null,
+    "peak_divergence": 0,
+    "writes_during_partition": 120,
+    "writes_after_heal": 889,
+    "network_stats": {
+      "sent": 522,
+      "dropped": 0,
+      "partitioned": 0,
+      "delivered": 520
+    },
+    "node_metrics": {
+      "us-east": {
+        "node_id": "us-east",
+        "region": "US East (N. Virginia)",
+        "write_attempts": 337,
+        "write_successes": 337,
+        "write_availability": 1.0,
+        "gossip_sent": 172,
+        "gossip_received": 174,
+        "store_stats": {
+          "node_id": "us-east",
+          "keys": 1,
+          "writes": 336,
+          "merges": 174
+        }
+      },
+      "eu-west": {
+        "node_id": "eu-west",
+        "region": "EU West (Ireland)",
+        "write_attempts": 338,
+        "write_successes": 338,
+        "write_availability": 1.0,
+        "gossip_sent": 174,
+        "gossip_received": 173,
+        "store_stats": {
+          "node_id": "eu-west",
+          "keys": 1,
+          "writes": 337,
+          "merges": 173
+        }
+      },
+      "ap-south": {
+        "node_id": "ap-south",
+        "region": "AP South (Mumbai)",
+        "write_attempts": 337,
+        "write_successes": 337,
+        "write_availability": 1.0,
+        "gossip_sent": 176,
+        "gossip_received": 173,
+        "store_stats": {
+          "node_id": "ap-south",
+          "keys": 1,
+          "writes": 336,
+          "merges": 173
+        }
+      }
+    },
+    "description": "No partition \u2014 baseline measurement of convergence time under realistic cross-region latencies only."
+  },
+  {
+    "scenario": "high_latency_no_partition",
+    "crdt_type": "orset",
+    "partition_duration_s": 0,
+    "write_availability": 1.0,
+    "convergence_time_s": 0.20269417762756348,
+    "peak_divergence": 0,
+    "writes_during_partition": 120,
+    "writes_after_heal": 12,
+    "network_stats": {
+      "sent": 82,
+      "dropped": 0,
+      "partitioned": 0,
+      "delivered": 78
+    },
+    "node_metrics": {
+      "us-east": {
+        "node_id": "us-east",
+        "region": "US East (N. Virginia)",
+        "write_attempts": 45,
+        "write_successes": 45,
+        "write_availability": 1.0,
+        "gossip_sent": 26,
+        "gossip_received": 26,
+        "store_stats": {
+          "node_id": "us-east",
+          "keys": 1,
+          "writes": 44,
+          "merges": 26
+        }
+      },
+      "eu-west": {
+        "node_id": "eu-west",
+        "region": "EU West (Ireland)",
+        "write_attempts": 45,
+        "write_successes": 45,
+        "write_availability": 1.0,
+        "gossip_sent": 28,
+        "gossip_received": 26,
+        "store_stats": {
+          "node_id": "eu-west",
+          "keys": 1,
+          "writes": 44,
+          "merges": 26
+        }
+      },
+      "ap-south": {
+        "node_id": "ap-south",
+        "region": "AP South (Mumbai)",
+        "write_attempts": 45,
+        "write_successes": 45,
+        "write_availability": 1.0,
+        "gossip_sent": 28,
+        "gossip_received": 26,
+        "store_stats": {
+          "node_id": "ap-south",
+          "keys": 1,
+          "writes": 44,
+          "merges": 26
+        }
+      }
+    },
+    "description": "No partition \u2014 baseline measurement of convergence time under realistic cross-region latencies only."
+  }
+]
